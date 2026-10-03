@@ -3,12 +3,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UNDA — radna verzija</title>
+  <title>UNDA inženjering — radna verzija</title>
+  <meta name="description" content="UNDA inženjering — projektna dokumentacija, stručni nadzor i sudsko veštačenje.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231b1d20'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='34' font-family='Arial' font-weight='700' fill='white'%3EU%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body>
-  <main>
-    <h1>UNDA</h1>
-    <p>Početna tačka za zajedničku izradu sajta.</p>
+<body data-title-sr="UNDA inženjering" data-title-en="UNDA Engineering">
+  <a class="skip-link" href="#sadrzaj" data-sr="Pređi na sadržaj" data-en="Skip to content">Pređi na sadržaj</a>
+
+  <header class="site-header">
+    <a class="brand" href="#pocetna" aria-label="UNDA inženjering — početna">
+      <span class="logo-placeholder" aria-hidden="true">LOGO</span>
+      <span class="brand-name">UNDA <strong data-sr="INŽENJERING" data-en="ENGINEERING">INŽENJERING</strong></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Glavna navigacija">
+      <a href="#pocetna" data-sr="Početna" data-en="Home">Početna</a>
+      <a href="reference.html" data-sr="Reference" data-en="References">Reference</a>
+      <a href="#kontakt" data-sr="Kontakt" data-en="Contact">Kontakt</a>
+    </nav>
+
+    <div class="language-switch" aria-label="Izbor jezika">
+      <button type="button" data-language="sr" aria-pressed="true">SR</button>
+      <span aria-hidden="true">/</span>
+      <button type="button" data-language="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <main id="sadrzaj">
+    <section class="hero" id="pocetna">
+      <div class="hero-copy">
+        <h1 data-sr="Stručnost iza svake odluke. Odgovornost prema svakom roku." data-en="Expertise behind every decision. Accountability for every deadline.">Stručnost iza svake odluke. Odgovornost prema svakom roku.</h1>
+      </div>
+
+      <div class="work-areas" aria-label="Glavne oblasti rada">
+        <article>
+          <h2 data-sr="Projektna dokumentacija" data-en="Design documentation">Projektna dokumentacija</h2>
+        </article>
+        <article>
+          <h2 data-sr="Stručni nadzor" data-en="Professional supervision">Stručni nadzor</h2>
+        </article>
+        <article>
+          <h2 data-sr="Sudsko veštačenje" data-en="Forensic expertise">Sudsko veštačenje</h2>
+        </article>
+      </div>
+      <a class="primary-link hero-reference-link" href="reference.html" data-sr="Pogledajte sve reference" data-en="View all references">Pogledajte sve reference</a>
+    </section>
+
+    <section class="benefits content-section" id="benefiti">
+      <div class="section-heading">
+        <p class="section-label" data-sr="Saradnja sa UNDA timom" data-en="Working with UNDA">Saradnja sa UNDA timom</p>
+        <h2 data-sr="Šta investitor dobija saradnjom sa nama" data-en="What investors gain by working with us">Šta investitor dobija saradnjom sa nama</h2>
+      </div>
+      <div class="benefit-grid">
+        <article><h3 data-sr="Kontrola kvaliteta izvođenja" data-en="Construction quality control">Kontrola kvaliteta izvođenja</h3><p data-sr="Provera da li su radovi izvedeni u skladu sa projektom, propisima i dogovorenim standardima." data-en="Verification that works comply with the design, regulations and agreed standards.">Provera da li su radovi izvedeni u skladu sa projektom, propisima i dogovorenim standardima.</p></article>
+        <article><h3 data-sr="Rano otkrivanje rizika" data-en="Early risk detection">Rano otkrivanje rizika</h3><p data-sr="Uočavanje tehničkih neusaglašenosti pre nego što postanu skupe za ispravku." data-en="Identifying technical inconsistencies before they become expensive to correct.">Uočavanje tehničkih neusaglašenosti pre nego što postanu skupe za ispravku.</p></article>
+        <article><h3 data-sr="Provera ponuda izvođača" data-en="Contractor bid review">Provera ponuda izvođača</h3><p data-sr="Analiza tehničkog sadržaja i kvaliteta pristiglih ponuda pre izbora izvođača." data-en="Review of the technical scope and quality of bids before contractor selection.">Analiza tehničkog sadržaja i kvaliteta pristiglih ponuda pre izbora izvođača.</p></article>
+        <article><h3 data-sr="Podrška do tehničkog prijema" data-en="Support through technical acceptance">Podrška do tehničkog prijema</h3><p data-sr="Praćenje projekta do završetka radova, potrebnih provera i tehničkog prijema objekta." data-en="Project support through completion, required inspections and technical acceptance.">Praćenje projekta do završetka radova, potrebnih provera i tehničkog prijema objekta.</p></article>
+      </div>
+    </section>
+
+    <section class="references content-section" id="reference">
+      <div class="section-heading section-heading-row">
+        <div><p class="section-label" data-sr="Izdvojeni projekti" data-en="Selected projects">Izdvojeni projekti</p><h2 data-sr="Najvažnije reference" data-en="Key references">Najvažnije reference</h2></div>
+        <span class="future-link" data-sr="Kasnije: sve reference" data-en="Later: all references">Kasnije: sve reference</span>
+      </div>
+      <div class="reference-grid">
+        <article class="reference-card"><div class="image-placeholder" data-sr="Fotografija kasnije" data-en="Image to be added">Fotografija kasnije</div><p data-sr="Stručni nadzor" data-en="Professional supervision">Stručni nadzor</p><h3 data-sr="Solarne elektrane" data-en="Solar power plants">Solarne elektrane</h3><span>Kucura · Temerin · Bačinci</span></article>
+        <article class="reference-card"><div class="image-placeholder" data-sr="Fotografija kasnije" data-en="Image to be added">Fotografija kasnije</div><p data-sr="Stručni nadzor" data-en="Professional supervision">Stručni nadzor</p><h3>Delta Iron</h3><span>Novi Sad</span></article>
+        <article class="reference-card"><div class="image-placeholder" data-sr="Fotografija kasnije" data-en="Image to be added">Fotografija kasnije</div><p data-sr="Stručni nadzor" data-en="Professional supervision">Stručni nadzor</p><h3 data-sr="Nestlé fabrika" data-en="Nestlé factory">Nestlé fabrika</h3><span>Surčin</span></article>
+        <article class="reference-card"><div class="image-placeholder" data-sr="Fotografija kasnije" data-en="Image to be added">Fotografija kasnije</div><p data-sr="Projektovanje i nadzor" data-en="Design and supervision">Projektovanje i nadzor</p><h3 data-sr="Novkabel poslovni centar" data-en="Novkabel business centre">Novkabel poslovni centar</h3><span>Novi Sad</span></article>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer" id="kontakt">
+    <div><p class="section-label" data-sr="Kontakt" data-en="Contact">Kontakt</p></div>
+    <a class="phone" href="tel:+38163372653">+381 63 372 653</a>
+    <p class="footer-note">UNDA <span data-sr="inženjering" data-en="engineering">inženjering</span></p>
+  </footer>
 </body>
 </html>
