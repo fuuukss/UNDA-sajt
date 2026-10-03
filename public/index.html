@@ -6,74 +6,84 @@
   <title>UNDA inženjering — radna verzija</title>
   <meta name="description" content="UNDA inženjering — projektna dokumentacija, stručni nadzor i sudsko veštačenje.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231b1d20'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='34' font-family='Arial' font-weight='700' fill='white'%3EU%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/main.js" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=10">
+  <script src="assets/js/main.js?v=6" defer></script>
 </head>
 <body data-title-sr="UNDA inženjering" data-title-en="UNDA Engineering">
   <a class="skip-link" href="#sadrzaj" data-sr="Pređi na sadržaj" data-en="Skip to content">Pređi na sadržaj</a>
 
   <header class="site-header">
-    <a class="brand" href="#pocetna" aria-label="UNDA inženjering — početna">
+    <a class="brand" href="#pocetna" aria-label="UNDA inženjering — početna" data-aria-sr="UNDA inženjering — početna" data-aria-en="UNDA Engineering — home">
       <span class="logo-placeholder" aria-hidden="true">LOGO</span>
       <span class="brand-name">UNDA <strong data-sr="INŽENJERING" data-en="ENGINEERING">INŽENJERING</strong></span>
     </a>
 
-    <nav class="main-nav" aria-label="Glavna navigacija">
+    <nav class="main-nav" aria-label="Glavna navigacija" data-aria-sr="Glavna navigacija" data-aria-en="Main navigation">
       <a href="#pocetna" data-sr="Početna" data-en="Home">Početna</a>
-      <a href="reference.html" data-sr="Reference" data-en="References">Reference</a>
+      <a href="reference.html" data-sr="Projekti" data-en="Projects">Projekti</a>
       <a href="#kontakt" data-sr="Kontakt" data-en="Contact">Kontakt</a>
     </nav>
 
-    <div class="language-switch" aria-label="Izbor jezika">
-      <button type="button" data-language="sr" aria-pressed="true">SR</button>
-      <span aria-hidden="true">/</span>
-      <button type="button" data-language="en" aria-pressed="false">EN</button>
+    <div class="language-switch" aria-label="Izbor jezika" data-aria-sr="Izbor jezika" data-aria-en="Language selection">
+      <button class="language-toggle" type="button" data-language-toggle data-target-language="en" aria-label="Prebaci na engleski">
+        <img class="language-flag" src="assets/images/flags/gb.png" alt="" aria-hidden="true">
+        <span class="language-code" aria-hidden="true">EN</span>
+      </button>
     </div>
   </header>
 
   <main id="sadrzaj">
     <section class="hero" id="pocetna">
       <div class="hero-copy">
-        <h1 data-sr="Stručnost iza svake odluke. Odgovornost prema svakom roku." data-en="Expertise behind every decision. Accountability for every deadline.">Stručnost iza svake odluke. Odgovornost prema svakom roku.</h1>
+        <h1><span data-sr="Stručnost iza svake odluke." data-en="Expertise behind every decision.">Stručnost iza svake odluke.</span><span data-sr="Odgovornost prema svakom roku." data-en="Accountability for every deadline.">Odgovornost prema svakom roku.</span></h1>
       </div>
 
-      <div class="work-areas" aria-label="Glavne oblasti rada">
+      <div class="work-areas" aria-label="Glavne oblasti rada" data-aria-sr="Glavne oblasti rada" data-aria-en="Core areas of expertise">
         <article>
           <h2 data-sr="Projektna dokumentacija" data-en="Design documentation">Projektna dokumentacija</h2>
+          <svg class="work-area-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
         </article>
         <article>
-          <h2 data-sr="Stručni nadzor" data-en="Professional supervision">Stručni nadzor</h2>
+          <h2 data-sr="Stručni nadzor" data-en="Construction supervision">Stručni nadzor</h2>
+          <svg class="work-area-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6S2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/><path d="m16.8 17.3 1.4 1.4 3-3"/></svg>
         </article>
         <article>
-          <h2 data-sr="Sudsko veštačenje" data-en="Forensic expertise">Sudsko veštačenje</h2>
+          <h2 data-sr="Sudsko veštačenje" data-en="Expert witness services">Sudsko veštačenje</h2>
+          <svg class="work-area-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M7 21h10M4 6h16M6 6l-3 7h6L6 6zM18 6l-3 7h6l-3-7z"/><path d="M3 13c.7 1.2 1.7 1.8 3 1.8S8.3 14.2 9 13M15 13c.7 1.2 1.7 1.8 3 1.8s2.3-.6 3-1.8"/></svg>
         </article>
       </div>
-      <a class="primary-link hero-reference-link" href="reference.html" data-sr="Pogledajte sve reference" data-en="View all references">Pogledajte sve reference</a>
+      <a class="primary-link hero-reference-link" href="reference.html" data-sr="Pogledajte sve projekte" data-en="View all projects">Pogledajte sve projekte</a>
     </section>
 
     <section class="benefits content-section" id="benefiti">
       <div class="section-heading">
-        <p class="section-label" data-sr="Saradnja sa UNDA timom" data-en="Working with UNDA">Saradnja sa UNDA timom</p>
-        <h2 data-sr="Šta investitor dobija saradnjom sa nama" data-en="What investors gain by working with us">Šta investitor dobija saradnjom sa nama</h2>
+        <h2 data-sr="Šta investitor dobija saradnjom sa nama" data-en="What investors gain from working with us">Šta investitor dobija saradnjom sa nama</h2>
       </div>
       <div class="benefit-grid">
-        <article><h3 data-sr="Kontrola kvaliteta izvođenja" data-en="Construction quality control">Kontrola kvaliteta izvođenja</h3><p data-sr="Provera da li su radovi izvedeni u skladu sa projektom, propisima i dogovorenim standardima." data-en="Verification that works comply with the design, regulations and agreed standards.">Provera da li su radovi izvedeni u skladu sa projektom, propisima i dogovorenim standardima.</p></article>
-        <article><h3 data-sr="Rano otkrivanje rizika" data-en="Early risk detection">Rano otkrivanje rizika</h3><p data-sr="Uočavanje tehničkih neusaglašenosti pre nego što postanu skupe za ispravku." data-en="Identifying technical inconsistencies before they become expensive to correct.">Uočavanje tehničkih neusaglašenosti pre nego što postanu skupe za ispravku.</p></article>
+        <article><h3 data-sr="Kontrola kvaliteta izvođenja" data-en="Construction quality control">Kontrola kvaliteta izvođenja</h3><p data-sr="Provera da li su radovi izvedeni u skladu sa projektom, propisima i dogovorenim standardima." data-en="Verification that construction work complies with the design documentation, regulations, and agreed standards.">Provera da li su radovi izvedeni u skladu sa projektom, propisima i dogovorenim standardima.</p></article>
+        <article><h3 data-sr="Rano otkrivanje rizika" data-en="Early risk detection">Rano otkrivanje rizika</h3><p data-sr="Uočavanje tehničkih neusaglašenosti pre nego što postanu skupe za ispravku." data-en="Identifying technical discrepancies before they become costly to correct.">Uočavanje tehničkih neusaglašenosti pre nego što postanu skupe za ispravku.</p></article>
         <article><h3 data-sr="Provera ponuda izvođača" data-en="Contractor bid review">Provera ponuda izvođača</h3><p data-sr="Analiza tehničkog sadržaja i kvaliteta pristiglih ponuda pre izbora izvođača." data-en="Review of the technical scope and quality of bids before contractor selection.">Analiza tehničkog sadržaja i kvaliteta pristiglih ponuda pre izbora izvođača.</p></article>
-        <article><h3 data-sr="Podrška do tehničkog prijema" data-en="Support through technical acceptance">Podrška do tehničkog prijema</h3><p data-sr="Praćenje projekta do završetka radova, potrebnih provera i tehničkog prijema objekta." data-en="Project support through completion, required inspections and technical acceptance.">Praćenje projekta do završetka radova, potrebnih provera i tehničkog prijema objekta.</p></article>
+        <article><h3 data-sr="Podrška do tehničkog prijema" data-en="Support through final inspection">Podrška do tehničkog prijema</h3><p data-sr="Praćenje projekta do završetka radova, potrebnih provera i tehničkog prijema objekta." data-en="Project support through completion, required inspections, and final handover.">Praćenje projekta do završetka radova, potrebnih provera i tehničkog prijema objekta.</p></article>
       </div>
     </section>
 
     <section class="references content-section" id="reference">
       <div class="section-heading section-heading-row">
-        <div><p class="section-label" data-sr="Izdvojeni projekti" data-en="Selected projects">Izdvojeni projekti</p><h2 data-sr="Najvažnije reference" data-en="Key references">Najvažnije reference</h2></div>
-        <span class="future-link" data-sr="Kasnije: sve reference" data-en="Later: all references">Kasnije: sve reference</span>
+        <div><h2 data-sr="Izdvojeni projekti" data-en="Selected projects">Izdvojeni projekti</h2></div>
+        <a class="projects-link-button" href="reference.html" data-sr="Pogledajte sve projekte" data-en="View all projects">Pogledajte sve projekte</a>
       </div>
-      <div class="reference-grid">
-        <article class="reference-card"><div class="image-placeholder" data-sr="Fotografija kasnije" data-en="Image to be added">Fotografija kasnije</div><p data-sr="Stručni nadzor" data-en="Professional supervision">Stručni nadzor</p><h3 data-sr="Solarne elektrane" data-en="Solar power plants">Solarne elektrane</h3><span>Kucura · Temerin · Bačinci</span></article>
-        <article class="reference-card"><div class="image-placeholder" data-sr="Fotografija kasnije" data-en="Image to be added">Fotografija kasnije</div><p data-sr="Stručni nadzor" data-en="Professional supervision">Stručni nadzor</p><h3>Delta Iron</h3><span>Novi Sad</span></article>
-        <article class="reference-card"><div class="image-placeholder" data-sr="Fotografija kasnije" data-en="Image to be added">Fotografija kasnije</div><p data-sr="Stručni nadzor" data-en="Professional supervision">Stručni nadzor</p><h3 data-sr="Nestlé fabrika" data-en="Nestlé factory">Nestlé fabrika</h3><span>Surčin</span></article>
-        <article class="reference-card"><div class="image-placeholder" data-sr="Fotografija kasnije" data-en="Image to be added">Fotografija kasnije</div><p data-sr="Projektovanje i nadzor" data-en="Design and supervision">Projektovanje i nadzor</p><h3 data-sr="Novkabel poslovni centar" data-en="Novkabel business centre">Novkabel poslovni centar</h3><span>Novi Sad</span></article>
+      <div class="reference-carousel">
+        <button class="carousel-button carousel-button-prev" type="button" data-carousel-direction="prev" aria-label="Prethodni projekti" data-aria-sr="Prethodni projekti" data-aria-en="Previous projects"><span aria-hidden="true">←</span></button>
+        <div class="reference-grid" data-reference-track>
+          <article class="reference-card"><img class="reference-card-image" src="assets/images/references/novkabel-new-tower.png" alt="NOVKABEL NEW TOWER"><h3>NOVKABEL NEW TOWER</h3><span data-sr="Novi Sad, Srbija" data-en="Novi Sad, Serbia">Novi Sad, Srbija</span></article>
+          <article class="reference-card"><img class="reference-card-image" src="assets/images/references/soul-64.jpg" alt="SOUL 64"><h3>SOUL 64</h3><span data-sr="Beograd, Srbija" data-en="Belgrade, Serbia">Beograd, Srbija</span></article>
+          <article class="reference-card"><img class="reference-card-image" src="assets/images/references/delta-iron.jpg" alt="DELTA IRON"><h3>DELTA IRON</h3><span data-sr="Novi Sad, Srbija" data-en="Novi Sad, Serbia">Novi Sad, Srbija</span></article>
+          <article class="reference-card"><img class="reference-card-image" src="assets/images/references/kamenica-3.jpg" alt="HOSPITAL - KAMENICA 3"><h3>HOSPITAL - KAMENICA 3</h3><span data-sr="Srbija" data-en="Serbia">Srbija</span></article>
+          <article class="reference-card"><img class="reference-card-image" src="assets/images/references/nestle-new-factory.png" alt="NESTLE - NEW FACTORY"><h3>NESTLE - NEW FACTORY</h3><span data-sr="Surčin, Srbija" data-en="Surčin, Serbia">Surčin, Srbija</span></article>
+          <article class="reference-card"><img class="reference-card-image" src="assets/images/references/industrial-park.png" alt="INDUSTRIAL PARK WHAREHOUSE"><h3>INDUSTRIAL PARK WHAREHOUSE</h3><span data-sr="Šimanovci, Srbija" data-en="Šimanovci, Serbia">Šimanovci, Srbija</span></article>
+          <article class="reference-card"><img class="reference-card-image" src="assets/images/references/solar-kucura.png" alt="SOLAR POWER PLANT - 5x10MW"><h3>SOLAR POWER PLANT - 5x10MW</h3><span data-sr="Kucura, Srbija" data-en="Kucura, Serbia">Kucura, Srbija</span></article>
+        </div>
+        <button class="carousel-button carousel-button-next" type="button" data-carousel-direction="next" aria-label="Sledeći projekti" data-aria-sr="Sledeći projekti" data-aria-en="Next projects"><span aria-hidden="true">→</span></button>
       </div>
     </section>
   </main>
@@ -84,6 +94,12 @@
       <div class="footer-contact-line"><span data-sr="Telefon:" data-en="Phone:">Telefon:</span> <a href="tel:+38163372653">+381 63 372 653</a></div>
       <div class="footer-contact-line"><span data-sr="Adresa:" data-en="Address:">Adresa:</span> <address data-sr="Jovana Cvijića 24/3, Novi Sad, Srbija" data-en="Jovana Cvijića 24/3, Novi Sad, Serbia">Jovana Cvijića 24/3, Novi Sad, Srbija</address></div>
       <div class="footer-contact-line footer-emails"><span>Email:</span><a href="mailto:dragan@unda.rs">dragan@unda.rs</a><a href="mailto:dragandj03@gmail.com">dragandj03@gmail.com</a></div>
+    </div>
+    <div class="footer-social">
+      <a class="linkedin-link" href="https://www.linkedin.com/in/dragan-djuric-0953867a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profil Dragana Đurića" data-aria-sr="LinkedIn profil Dragana Đurića" data-aria-en="Dragan Đurić's LinkedIn profile">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7.5v.1M12 17v-7M12 13.2c.8-2 4-2.1 4 1V17"/></svg>
+        <span>LinkedIn</span>
+      </a>
     </div>
   </footer>
 </body>
