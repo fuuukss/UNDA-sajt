@@ -9,8 +9,20 @@
     title.dataset.englishTitle = title.dataset.en || title.textContent.trim();
   });
 
+  function updateInternalLinks(language) {
+    document.querySelectorAll('a[href]').forEach((link) => {
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || /^(mailto:|tel:|https?:\/\/)/i.test(href)) return;
+      const url = new URL(href, window.location.href);
+      if (url.origin !== window.location.origin) return;
+      url.searchParams.set('lang', language);
+      link.setAttribute('href', `${url.pathname}${url.search}${url.hash}`);
+    });
+  }
+
   function changeLanguage(language) {
     const selectedLanguage = language === 'en' ? 'en' : 'sr';
+    try { window.localStorage.setItem('unda-language', selectedLanguage); } catch (_) {}
     document.documentElement.lang = selectedLanguage;
     elements.forEach((element) => { element.textContent = element.dataset[selectedLanguage]; });
     labelledElements.forEach((element) => { element.setAttribute('aria-label', element.dataset[selectedLanguage === 'sr' ? 'ariaSr' : 'ariaEn']); });
@@ -21,6 +33,11 @@
         : englishTitle;
     });
     document.title = document.body.dataset[selectedLanguage === 'sr' ? 'titleSr' : 'titleEn'];
+    updateInternalLinks(selectedLanguage);
+
+    const pageUrl = new URL(window.location.href);
+    pageUrl.searchParams.set('lang', selectedLanguage);
+    window.history.replaceState(null, '', `${pageUrl.pathname}${pageUrl.search}${pageUrl.hash}`);
 
     if (languageToggle) {
       const targetLanguage = selectedLanguage === 'sr' ? 'en' : 'sr';
@@ -47,5 +64,9 @@
       referenceTrack.scrollTo({ left, behavior: 'smooth' });
     });
   });
-  changeLanguage(document.documentElement.lang);
+  let savedLanguage = document.documentElement.lang;
+  try { savedLanguage = window.localStorage.getItem('unda-language') || savedLanguage; } catch (_) {}
+  const urlLanguage = new URLSearchParams(window.location.search).get('lang');
+  if (urlLanguage === 'sr' || urlLanguage === 'en') savedLanguage = urlLanguage;
+  changeLanguage(savedLanguage);
 })();

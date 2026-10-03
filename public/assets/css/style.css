@@ -24,7 +24,8 @@ button { font:inherit; }
 .language-flag { width:28px; height:19px; display:block; object-fit:cover; border:1px solid rgba(8,23,34,.18); border-radius:2px; }
 .language-code { font-size:.9rem; letter-spacing:.06em; }
 
-.hero { padding:clamp(2.2rem,4vw,3.5rem) clamp(1rem,1.5vw,2rem) clamp(2rem,3vw,3rem); display:flex; flex-direction:column; gap:clamp(1.5rem,3vw,2.5rem); background:var(--ink); color:var(--white); }
+.hero { padding:clamp(2.2rem,4vw,3.5rem) clamp(1rem,1.5vw,2rem) clamp(2rem,3vw,3rem); display:flex; flex-direction:column; gap:clamp(1.5rem,3vw,2.5rem); position:relative; isolation:isolate; overflow:hidden; background:var(--ink); color:var(--white); }
+.hero::before { content:""; position:absolute; inset:0; z-index:-1; background:url("../images/cad-pattern.svg") center/cover no-repeat; pointer-events:none; }
 .section-label { margin:0 0 1rem; color:var(--signal-dark); font-size:.75rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
 .hero h1 { max-width:none; margin:0; font-size:clamp(2.4rem,4.6vw,4.4rem); line-height:1.02; letter-spacing:-.045em; }
 .hero h1 span { display:block; white-space:nowrap; }
@@ -68,6 +69,7 @@ button { font:inherit; }
 .site-footer { padding:clamp(4rem,8vw,7rem) clamp(1rem,1.5vw,2rem); background:var(--ink); color:var(--white); }
 .footer-brand { display:block; margin-bottom:2rem; font-size:1.05rem; letter-spacing:.08em; text-transform:uppercase; }
 .footer-brand span { font-weight:400; }
+.footer-company-name { letter-spacing:.02em; text-transform:none; }
 .footer-contact { display:flex; flex-direction:column; align-items:flex-start; gap:.65rem; }
 .footer-contact-line { width:100%; display:grid; grid-template-columns:3.75rem minmax(0,1fr); column-gap:.25rem; align-items:baseline; color:var(--white); font-size:1rem; line-height:1.5; }
 html[lang="en"] .footer-contact-line { grid-template-columns:4rem minmax(0,1fr); column-gap:.6rem; }
@@ -79,6 +81,7 @@ html[lang="en"] .footer-contact-line { grid-template-columns:4rem minmax(0,1fr);
 .linkedin-link { display:inline-flex; align-items:center; gap:.7rem; color:var(--white); text-decoration:none; font-weight:700; }
 .linkedin-link svg { width:2.2rem; height:2.2rem; fill:none; stroke:var(--signal); stroke-linecap:round; stroke-linejoin:round; stroke-width:1.7; }
 .linkedin-link:hover,.linkedin-link:focus-visible { color:var(--signal); }
+.company-identifiers { margin-top:1rem; display:flex; flex-direction:column; gap:.2rem; color:var(--white); font-size:.92rem; }
 .reference-placeholder { min-height:100vh; padding:clamp(3rem,8vw,8rem); display:flex; flex-direction:column; align-items:flex-start; justify-content:center; background:var(--surface); }
 .reference-placeholder h1 { max-width:850px; margin:0 0 2rem; font-size:clamp(2.5rem,6vw,5rem); line-height:1; letter-spacing:-.05em; }
 

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="smallGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#d8e3e7" stroke-opacity=".045" stroke-width="1"/>
+    </pattern>
+    <pattern id="largeGrid" width="160" height="160" patternUnits="userSpaceOnUse">
+      <rect width="160" height="160" fill="url(#smallGrid)"/>
+      <path d="M160 0H0V160" fill="none" stroke="#d8e3e7" stroke-opacity=".08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="720" fill="url(#largeGrid)"/>
+
+  <g fill="none" stroke="#d8e3e7" stroke-opacity=".115" stroke-width="1.2">
+    <path d="M875 52h530v410H875zM925 102h180v126H925zM1136 102h219v126h-219zM925 260h430v152H925z"/>
+    <path d="M1015 102v126M1246 102v126M1068 260v152M1218 260v152"/>
+    <path d="M875 478h530M875 468v20M1405 468v20M842 52v410M832 52h20M832 462h20"/>
+    <path d="M902 503l-27-25 27-25M1378 453l27 25-27 25M807 78l35-26 35 26M807 436l35 26 35-26"/>
+    <circle cx="1285" cy="336" r="48"/>
+    <circle cx="1285" cy="336" r="16"/>
+    <path d="M1237 336h96M1285 288v96"/>
+  </g>
+
+  <g fill="none" stroke="#f5b942" stroke-opacity=".17" stroke-width="1.4">
+    <circle cx="1460" cy="90" r="118"/>
+    <circle cx="1460" cy="90" r="72"/>
+    <path d="M1342 90h236M1460-28v236M1000 590h390l70-70M1390 590l70 70"/>
+    <path d="M970 590h18M1402 590h18M1460 508v24M1460 648v24"/>
+  </g>
+
+  <g fill="none" stroke="#d8e3e7" stroke-opacity=".075" stroke-width="1">
+    <path d="M80 620h650M120 580v80M180 600v60M260 560v100M360 590v70M500 550v110M650 600v60"/>
+    <path d="M80 620l38-22M80 620l38 22M730 620l-38-22M730 620l-38 22"/>
+    <path d="M100 120h530l80 80v265H100zM150 170h210v115H150zM395 170h185v115H395zM150 325h430v90H150z"/>
+  </g>
+</svg>
