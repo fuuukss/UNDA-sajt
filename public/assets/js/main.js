@@ -6,6 +6,7 @@
   const languageOptions = document.querySelectorAll('[data-language-option]');
   const projectTitles = document.querySelectorAll('.project-reference-content h2');
   const referenceTrack = document.querySelector('[data-reference-track]');
+  const siteHeader = document.querySelector('.site-header');
 
   projectTitles.forEach((title) => {
     title.dataset.englishTitle = title.dataset.en || title.textContent.trim();
@@ -97,6 +98,34 @@
       languageToggle?.focus();
     }
   });
+
+  if (siteHeader) {
+    let lastScrollPosition = window.scrollY;
+    let scrollFrameRequested = false;
+
+    window.addEventListener('scroll', () => {
+      if (scrollFrameRequested) return;
+      scrollFrameRequested = true;
+
+      window.requestAnimationFrame(() => {
+        const currentScrollPosition = Math.max(window.scrollY, 0);
+        const movement = currentScrollPosition - lastScrollPosition;
+
+        if (currentScrollPosition <= siteHeader.offsetHeight) {
+          siteHeader.classList.remove('site-header--hidden');
+        } else if (movement > 6) {
+          siteHeader.classList.add('site-header--hidden');
+          closeLanguageMenu();
+        } else if (movement < -6) {
+          siteHeader.classList.remove('site-header--hidden');
+        }
+
+        if (Math.abs(movement) > 6) lastScrollPosition = currentScrollPosition;
+        scrollFrameRequested = false;
+      });
+    }, { passive: true });
+  }
+
   document.querySelectorAll('[data-carousel-direction]').forEach((button) => {
     button.addEventListener('click', () => {
       if (!referenceTrack) return;
