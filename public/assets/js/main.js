@@ -2,6 +2,8 @@
   const elements = document.querySelectorAll('[data-sr][data-en]');
   const labelledElements = document.querySelectorAll('[data-aria-sr][data-aria-en]');
   const languageToggle = document.querySelector('[data-language-toggle]');
+  const languageMenu = document.querySelector('[data-language-menu]');
+  const languageOptions = document.querySelectorAll('[data-language-option]');
   const projectTitles = document.querySelectorAll('.project-reference-content h2');
   const referenceTrack = document.querySelector('[data-reference-track]');
 
@@ -61,15 +63,40 @@
     window.history.replaceState(null, '', `${pageUrl.pathname}${pageUrl.search}${pageUrl.hash}`);
 
     if (languageToggle) {
-      const targetLanguage = selectedLanguage === 'sr' ? 'en' : 'sr';
-      languageToggle.dataset.targetLanguage = targetLanguage;
-      languageToggle.querySelector('.language-flag').src = targetLanguage === 'en' ? 'assets/images/flags/gb.png' : 'assets/images/flags/rs.png';
-      languageToggle.querySelector('.language-code').textContent = targetLanguage.toUpperCase();
-      languageToggle.setAttribute('aria-label', selectedLanguage === 'sr' ? 'Prebaci na engleski' : 'Switch to Serbian');
+      languageToggle.querySelector('.language-flag').src = selectedLanguage === 'en' ? 'assets/images/flags/gb.png' : 'assets/images/flags/rs.png';
+      languageToggle.querySelector('.language-code').textContent = selectedLanguage.toUpperCase();
+      languageToggle.setAttribute('aria-label', selectedLanguage === 'sr' ? 'Izaberi jezik. Trenutno srpski' : 'Choose language. Currently English');
+      languageOptions.forEach((option) => option.setAttribute('aria-current', String(option.dataset.languageOption === selectedLanguage)));
     }
   }
 
-  languageToggle?.addEventListener('click', () => changeLanguage(languageToggle.dataset.targetLanguage));
+  function closeLanguageMenu() {
+    if (!languageToggle || !languageMenu) return;
+    languageMenu.hidden = true;
+    languageToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  languageToggle?.addEventListener('click', () => {
+    if (!languageMenu) return;
+    const willOpen = languageMenu.hidden;
+    languageMenu.hidden = !willOpen;
+    languageToggle.setAttribute('aria-expanded', String(willOpen));
+  });
+  languageOptions.forEach((option) => {
+    option.addEventListener('click', () => {
+      changeLanguage(option.dataset.languageOption);
+      closeLanguageMenu();
+    });
+  });
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.language-switch')) closeLanguageMenu();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeLanguageMenu();
+      languageToggle?.focus();
+    }
+  });
   document.querySelectorAll('[data-carousel-direction]').forEach((button) => {
     button.addEventListener('click', () => {
       if (!referenceTrack) return;

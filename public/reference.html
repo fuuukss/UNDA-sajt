@@ -24,8 +24,8 @@
   <meta name="twitter:title" content="Projekti | UNDA inženjering">
   <meta name="twitter:description" content="Završeni projekti iz oblasti projektne dokumentacije, stručnog nadzora i sudskog veštačenja.">
   <meta name="twitter:image" content="https://unda.rs/assets/images/references/novkabel-new-tower.png">
-  <link rel="stylesheet" href="assets/css/style.css?v=17">
-  <script src="assets/js/main.js?v=10" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=18">
+  <script src="assets/js/main.js?v=11" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -57,10 +57,15 @@
       <a href="index.html#kontakt" data-sr="Kontakt" data-en="Contact">Kontakt</a>
     </nav>
     <div class="language-switch" aria-label="Izbor jezika" data-aria-sr="Izbor jezika" data-aria-en="Language selection">
-      <button class="language-toggle" type="button" data-language-toggle data-target-language="en" aria-label="Prebaci na engleski">
-        <img class="language-flag" src="assets/images/flags/gb.png" alt="" aria-hidden="true">
-        <span class="language-code" aria-hidden="true">EN</span>
+      <button class="language-toggle" type="button" data-language-toggle aria-haspopup="menu" aria-expanded="false">
+        <img class="language-flag" src="assets/images/flags/rs.png" alt="" aria-hidden="true">
+        <span class="language-code">SR</span>
+        <svg class="language-chevron" viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1.5 5 5 5-5"/></svg>
       </button>
+      <div class="language-menu" data-language-menu role="menu" hidden>
+        <button type="button" data-language-option="sr" role="menuitem"><img src="assets/images/flags/rs.png" alt="" aria-hidden="true"><span>SR</span></button>
+        <button type="button" data-language-option="en" role="menuitem"><img src="assets/images/flags/gb.png" alt="" aria-hidden="true"><span>EN</span></button>
+      </div>
     </div>
   </header>
 
@@ -168,6 +173,16 @@
       <div class="footer-contact-line"><span data-sr="Telefon:" data-en="Phone:">Telefon:</span> <a href="tel:+38163372653">+381 63 372 653</a></div>
       <div class="footer-contact-line"><span data-sr="Adresa:" data-en="Address:">Adresa:</span> <address data-sr="Jovana Cvijića 24/3, Novi Sad, Srbija" data-en="Jovana Cvijića 24/3, Novi Sad, Serbia">Jovana Cvijića 24/3, Novi Sad, Srbija</address></div>
       <div class="footer-contact-line footer-emails"><span>Email:</span><a href="mailto:dragan@unda.rs">dragan@unda.rs</a><a href="mailto:dragandj03@gmail.com">dragandj03@gmail.com</a></div>
+    </div>
+    <div class="footer-social">
+      <a class="linkedin-link" href="https://www.linkedin.com/in/dragan-djuric-0953867a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profil Dragana Đurića" data-aria-sr="LinkedIn profil Dragana Đurića" data-aria-en="Dragan Đurić's LinkedIn profile">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7.5v.1M12 17v-7M12 13.2c.8-2 4-2.1 4 1V17"/></svg>
+        <span>LinkedIn</span>
+      </a>
+    </div>
+    <div class="company-identifiers">
+      <span>PIB: 111186464</span>
+      <span>MB: 21438464</span>
     </div>
   </footer>
 </body>

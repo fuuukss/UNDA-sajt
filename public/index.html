@@ -24,8 +24,8 @@
   <meta name="twitter:title" content="UNDA inženjering | Projektovanje i stručni nadzor">
   <meta name="twitter:description" content="Projektna dokumentacija, stručni nadzor i sudsko veštačenje za sigurne i uspešne projekte.">
   <meta name="twitter:image" content="https://unda.rs/assets/images/references/novkabel-new-tower.png">
-  <link rel="stylesheet" href="assets/css/style.css?v=17">
-  <script src="assets/js/main.js?v=10" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=18">
+  <script src="assets/js/main.js?v=11" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -63,10 +63,15 @@
     </nav>
 
     <div class="language-switch" aria-label="Izbor jezika" data-aria-sr="Izbor jezika" data-aria-en="Language selection">
-      <button class="language-toggle" type="button" data-language-toggle data-target-language="en" aria-label="Prebaci na engleski">
-        <img class="language-flag" src="assets/images/flags/gb.png" alt="" aria-hidden="true">
-        <span class="language-code" aria-hidden="true">EN</span>
+      <button class="language-toggle" type="button" data-language-toggle aria-haspopup="menu" aria-expanded="false">
+        <img class="language-flag" src="assets/images/flags/rs.png" alt="" aria-hidden="true">
+        <span class="language-code">SR</span>
+        <svg class="language-chevron" viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1.5 5 5 5-5"/></svg>
       </button>
+      <div class="language-menu" data-language-menu role="menu" hidden>
+        <button type="button" data-language-option="sr" role="menuitem"><img src="assets/images/flags/rs.png" alt="" aria-hidden="true"><span>SR</span></button>
+        <button type="button" data-language-option="en" role="menuitem"><img src="assets/images/flags/gb.png" alt="" aria-hidden="true"><span>EN</span></button>
+      </div>
     </div>
   </header>
 
