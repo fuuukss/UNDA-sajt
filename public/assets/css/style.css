@@ -57,7 +57,7 @@ button { font:inherit; }
 .carousel-button:hover,.carousel-button:focus-visible { background:#f8d37c; }
 .carousel-button-prev { left:0; }
 .carousel-button-next { right:0; }
-.reference-card-image { width:100%; aspect-ratio:4/3; display:block; object-fit:cover; border-bottom:3px solid var(--signal); }
+.reference-card-image { width:100%; height:auto; aspect-ratio:4/3; display:block; object-fit:cover; border-bottom:3px solid var(--signal); }
 .reference-card>p,.reference-card>h3,.reference-card>span { margin-left:1rem; margin-right:1rem; }
 .reference-card>p { margin-top:1.2rem; margin-bottom:.35rem; color:var(--signal-dark); font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; }
 .reference-card>h3 { margin-top:1.2rem; margin-bottom:.3rem; font-size:1.2rem; line-height:1.25; }
@@ -86,7 +86,7 @@ html[lang="en"] .footer-contact-line { grid-template-columns:4rem minmax(0,1fr);
 .all-references-hero h1 { margin:0; font-size:clamp(2.35rem,4.5vw,4.25rem); line-height:.98; letter-spacing:-.045em; }
 .all-references-grid { padding:clamp(2rem,4vw,4rem) clamp(1rem,1.5vw,2rem) clamp(5rem,8vw,8rem); display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.25rem; align-items:start; }
 .project-reference-card { overflow:hidden; border:1px solid var(--line); border-radius:1.5rem; background:var(--white); }
-.project-reference-card>img { width:100%; aspect-ratio:16/10; display:block; object-fit:cover; border-bottom:3px solid var(--signal); }
+.project-reference-card>img { width:100%; height:auto; aspect-ratio:16/10; display:block; object-fit:cover; border-bottom:3px solid var(--signal); }
 .project-reference-content { padding:1.5rem; display:flex; flex-direction:column; align-items:flex-start; gap:1rem; }
 .project-reference-content h2 { margin:0; font-size:clamp(1.25rem,1.8vw,1.65rem); line-height:1.15; letter-spacing:-.02em; }
 .project-reference-content p { margin:0; color:var(--muted); }
