@@ -32,7 +32,17 @@
         ? englishTitle.replaceAll('Port Belgrade', 'Luka Beograd').replaceAll('Belgrade', 'Beograd').replaceAll('Serbia', 'Srbija')
         : englishTitle;
     });
-    document.title = document.body.dataset[selectedLanguage === 'sr' ? 'titleSr' : 'titleEn'];
+    const languageKey = selectedLanguage === 'sr' ? 'Sr' : 'En';
+    const pageTitle = document.body.dataset[`title${languageKey}`];
+    const pageDescription = document.body.dataset[`description${languageKey}`];
+    const socialDescription = document.body.dataset[`socialDescription${languageKey}`];
+    document.title = pageTitle;
+    document.querySelector('meta[name="description"]')?.setAttribute('content', pageDescription);
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', pageTitle);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', socialDescription);
+    document.querySelector('meta[property="og:locale"]')?.setAttribute('content', selectedLanguage === 'sr' ? 'sr_RS' : 'en_US');
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', pageTitle);
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', socialDescription);
     updateInternalLinks(selectedLanguage);
 
     const pageUrl = new URL(window.location.href);
