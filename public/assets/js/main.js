@@ -31,6 +31,8 @@
       title.textContent = selectedLanguage === 'sr'
         ? englishTitle.replaceAll('Port Belgrade', 'Luka Beograd').replaceAll('Belgrade', 'Beograd').replaceAll('Serbia', 'Srbija')
         : englishTitle;
+      const projectImage = title.closest('.project-reference-card')?.querySelector('img');
+      if (projectImage) projectImage.alt = title.textContent;
     });
     const languageKey = selectedLanguage === 'sr' ? 'Sr' : 'En';
     const pageTitle = document.body.dataset[`title${languageKey}`];
@@ -43,6 +45,15 @@
     document.querySelector('meta[property="og:locale"]')?.setAttribute('content', selectedLanguage === 'sr' ? 'sr_RS' : 'en_US');
     document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', pageTitle);
     document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', socialDescription);
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      const canonicalUrl = new URL(canonical.href);
+      if (selectedLanguage === 'en') canonicalUrl.searchParams.set('lang', 'en');
+      else canonicalUrl.searchParams.delete('lang');
+      canonical.href = canonicalUrl.toString();
+      document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonicalUrl.toString());
+    }
     updateInternalLinks(selectedLanguage);
 
     const pageUrl = new URL(window.location.href);
@@ -66,7 +77,8 @@
       const gap = Number.parseFloat(getComputedStyle(referenceTrack).gap) || 0;
       const step = card ? card.getBoundingClientRect().width + gap : referenceTrack.clientWidth * .8;
       const isNext = button.dataset.carouselDirection === 'next';
-      const atStart = referenceTrack.scrollLeft <= 4;
+      const startOffset = card ? card.offsetLeft - referenceTrack.offsetLeft : 0;
+      const atStart = referenceTrack.scrollLeft <= startOffset + 4;
       const atEnd = referenceTrack.scrollLeft + referenceTrack.clientWidth >= referenceTrack.scrollWidth - 4;
       const left = isNext
         ? (atEnd ? 0 : referenceTrack.scrollLeft + step)
